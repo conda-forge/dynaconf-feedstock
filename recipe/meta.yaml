@@ -1,5 +1,5 @@
 {% set name = "dynaconf" %}
-{% set version = "3.1.2" %}
+{% set version = "3.1.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,21 +7,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9b34ab2f811a81755f5eb4beac77a69e1e0887528c7e37fc4bc83fed52dcf502
+  sha256: b2f472d83052f809c5925565b8a2ba76a103d5dc1dbb9748b693ed67212781b9
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - dynaconf = dynaconf.cli:main
 
 requirements:
   host:
-    - python
+    - python >=3
     - pip
   run:
-    - python
+    - setuptools >=38.6.0
+    - python >=3
 
 test:
   imports:
@@ -34,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Configuration Management for Python.'
+  summary: Configuration Management for Python.
   doc_url: https://www.dynaconf.com/
   dev_url: https://github.com/rochacbruno/dynaconf
 
