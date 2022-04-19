@@ -1,5 +1,5 @@
 {% set name = "dynaconf" %}
-{% set version = "3.1.7" %}
+{% set version = "3.1.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e9d80b46ba4d9372f2f40c812594c963f74178140c0b596e57f2881001fc4d35
+  sha256: d141a6664fca3648d2d8e84440966af9f58c4f4201ca78353a3f595a67c19ab4
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - dynaconf = dynaconf.cli:main
