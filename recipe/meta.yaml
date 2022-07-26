@@ -1,34 +1,38 @@
 {% set name = "dynaconf" %}
-{% set version = "3.1.9" %}
+{% set version = "3.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f435c9e5b0b4b1dddf5e17e60a1e4c91ae0e6275aa51522456e671a7be3380eb
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/dynaconf-{{ version }}.tar.gz
+  sha256: 8bb72cbcd8f2d495665ea24000ba61160b82610e30b6afdd27893af7bdb80c6b
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - dynaconf = dynaconf.cli:main
+    - dynaconf=dynaconf.cli:main
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.6
     - pip
-  run:
     - setuptools >=38.6.0
-    - python >=3.7
+  run:
+    - python >=3.6
+    - typing
 
 test:
   imports:
     - dynaconf
   commands:
+    - pip check
     - dynaconf --help
+  requires:
+    - pip
 
 about:
   home: https://www.dynaconf.com/
