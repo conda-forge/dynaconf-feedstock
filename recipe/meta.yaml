@@ -21,7 +21,6 @@ requirements:
     - python >=3.7
     - pip
   run:
-    - setuptools >=38.6.0
     - python >=3.7
 
 test:
