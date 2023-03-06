@@ -1,11 +1,11 @@
-About dynaconf
-==============
+About dynaconf-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dynaconf-feedstock/blob/main/LICENSE.txt)
 
 Home: https://www.dynaconf.com/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dynaconf-feedstock/blob/main/LICENSE.txt)
 
 Summary: Configuration Management for Python.
 
