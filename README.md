@@ -7,7 +7,7 @@ Home: https://www.dynaconf.com/
 
 Package license: MIT
 
-Summary: Configuration Management for Python.
+Summary: The dynamic configurator for your Python Project
 
 Development: https://github.com/rochacbruno/dynaconf
 
