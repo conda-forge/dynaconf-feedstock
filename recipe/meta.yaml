@@ -1,5 +1,5 @@
 {% set name = "dynaconf" %}
-{% set version = "3.2.3" %}
+{% set version = "3.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8a37ba3b16df64cb1db383eaad9c733aece218413be0fad5d785f7a907612106
+  sha256: 2e6adebaa587f4df9241a16a4bec3fda521154d26b15f3258fde753a592831b6
 
 build:
   entry_points:
