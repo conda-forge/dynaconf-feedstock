@@ -33,12 +33,8 @@ tests:
       imports:
         - dynaconf
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+      pip_check: true
+  - script:
       - dynaconf --help
 
 about:
