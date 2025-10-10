@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dynaconf
-  version: 3.2.11
+  version: "3.2.12"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 4cfc6a730c533bf1a1d0bf266ae202133a22236bb3227d23eff4b8542d4034a5
+  sha256: 29cea583b007d890e6031fa89c0ac489b631c73dbee83bcd5e6f97602c26354e
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv
   python:
