@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: dynaconf
-  version: "3.3.0"
+  version: "3.3.1"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 923b8a497eda5457d88ec2f30389a564f7f5faaeb83399b027f0a6c50cf4516f
+  sha256: 6be6b3970dfe9c3a66647ded973952a8600582a8c55e2c1842e5b21aa12ef5e1
 
 build:
   number: 0
