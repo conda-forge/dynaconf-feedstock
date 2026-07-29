@@ -9,7 +9,7 @@ Package license: MIT
 
 Summary: The dynamic configurator for your Python Project
 
-Development: https://github.com/rochacbruno/dynaconf
+Development: https://github.com/dynaconf/dynaconf/
 
 Documentation: https://www.dynaconf.com/
 
